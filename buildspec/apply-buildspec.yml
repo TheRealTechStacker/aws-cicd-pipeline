@@ -7,3 +7,4 @@ phases:
   build:
     commands:
       - terraform apply --auto-approve
+      - sh test.sh
