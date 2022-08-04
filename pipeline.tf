@@ -1,4 +1,18 @@
 // Pipeline comment 2
+
+module "codepipeline_notifications" {
+  source = "./notifications"
+
+  name          = "codepipeline-notifications"
+  namespace     = "test"
+  stage         = "test"
+  slack_url     = var.slack_url
+  slack_channel = var.slack_channel
+  codepipelines = [
+    aws_codepipeline.cicd_pipeline,
+  ]
+}
+
 resource "aws_codebuild_project" "tf-plan" {
   name          = "tf-cicd-plan"
   description   = "Pplan stage for terraform"
