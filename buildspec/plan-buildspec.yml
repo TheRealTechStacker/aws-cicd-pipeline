@@ -7,3 +7,4 @@ phases:
   build:
     commands:
       - terraform plan
+      - sh test.sh
