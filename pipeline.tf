@@ -1,3 +1,4 @@
+// Pipeline
 resource "aws_codebuild_project" "tf-plan" {
   name          = "tf-cicd-plan"
   description   = "Pplan stage for terraform"
