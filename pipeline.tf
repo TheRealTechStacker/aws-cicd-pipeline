@@ -12,6 +12,10 @@ module "codepipeline_notifications" {
     { 
       name = "tf-cicd"
       arn = "arn:aws:codepipeline:eu-central-1:745058185994:tf-cicd"
+    },
+    {
+      name = "tf-cicd2"
+      arn = "arn:aws:codepipeline:eu-central-1:745058185994:tf-cicd2"
     }
   ]
 }
