@@ -4,12 +4,15 @@ module "codepipeline_notifications" {
   source = "./notifications"
 
   name          = "codepipeline-notifications"
-  namespace     = "test"
+  namespace     = "test arn"
   stage         = "test"
   slack_url     = var.slack_url
   slack_channel = var.slack_channel
   codepipelines = [
-    aws_codepipeline.cicd_pipeline,
+    { 
+      name = "tf-cicd"
+      arn = "arn:aws:codepipeline:eu-central-1:745058185994:tf-cicd"
+    }
   ]
 }
 
