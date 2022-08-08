@@ -4,7 +4,7 @@ module "codepipeline_notifications" {
   source = "./notifications"
 
   name          = "codepipeline-notifications"
-  namespace     = "test arn"
+  namespace     = "global"
   stage         = "test"
   slack_url     = var.slack_url
   slack_channel = var.slack_channel
