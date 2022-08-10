@@ -6,8 +6,9 @@ module "codepipeline_notifications" {
   name          = "codepipeline-notifications"
   namespace     = "global"
   stage         = "global"
-  slack_url     = var.slack_url
-  slack_channel = var.slack_channel
+  slack_endpoints = jsonencode(var.slack_endpoints)
+  # slack_url     = var.slack_url
+  # slack_channel = var.slack_channel
   codepipelines = [
     { 
       name = "tf-cicd"

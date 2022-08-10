@@ -8,12 +8,17 @@ variable codestar_connector_credentials {
     type = string
 }
 
-variable "slack_url" {
-  type        = string
-  description = "The webhook URL"
-}
+# variable "slack_url" {
+#   type        = string
+#   description = "The webhook URL"
+# }
 
-variable "slack_channel" {
-  type        = string
-  description = "The name of the channel to post the notifications to"
+# variable "slack_channel" {
+#   type        = string
+#   description = "The name of the channel to post the notifications to"
+# }
+
+variable "slack_endpoints" {
+  type        = list(any)
+  description = "The list of slack endpoints and channels to post notifications to"
 }
